@@ -1,42 +1,4 @@
-URL: /
-Timestamp: Thu Aug 22 2024 19:35:42 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:35:42 GMT+0200 (hora de verano de Europa central)
-
-URL: /documentation
-Timestamp: Thu Aug 22 2024 19:36:05 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:36:05 GMT+0200 (hora de verano de Europa central)
-
-URL: /documentationssss
-Timestamp: Thu Aug 22 2024 19:36:13 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:36:13 GMT+0200 (hora de verano de Europa central)
-
-URL: /documentationssss
-Timestamp: Thu Aug 22 2024 19:47:02 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:47:02 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:47:04 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:47:05 GMT+0200 (hora de verano de Europa central)
-
-URL: /
-Timestamp: Thu Aug 22 2024 19:47:06 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:47:06 GMT+0200 (hora de verano de Europa central)
-
-URL: /
-Timestamp: Thu Aug 22 2024 19:47:53 GMT+0200 (hora de verano de Europa central)
-
-URL: /favicon.ico
-Timestamp: Thu Aug 22 2024 19:47:53 GMT+0200 (hora de verano de Europa central)
-
+::ffff:127.0.0.1 - - [30/Aug/2024:21:36:35 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [30/Aug/2024:21:36:44 +0000] "GET /movies HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [30/Aug/2024:21:36:57 +0000] "GET /books HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [30/Aug/2024:21:37:00 +0000] "GET /secreturl HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
