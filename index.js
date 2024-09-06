@@ -87,7 +87,50 @@ let topMovies = [
   app.get('/Books', (req, res) => {
     res.json(topBooks);
   });
+
+  app.get('/movies', (req, res) => {
+    res.send("Successful GET request returning data of all movies");
+  });
+
+  app.get("/movies/:name", (req, res) =>{
+    res.send("Successful GET request returning data of an specific movie")
+  });
+
+  app.get("/genres/:name", (req, res) =>{
+    res.send("Successful GET request returning data about a genre")
+  });
+
+  app.get("/directors/:name", (req, res) =>{
+    res.send("Successful GET request returning data about a director")
+  });
+
+ 
+  //POST request 
+
+  app.post("/users/register", (req, res) =>{
+    res.send("Successful POST request to register a new user")
+  });
+
+ //PUT requests 
   
+ app.put("/users/:username", (req, res) =>{
+  res.send("Successful PUT request to update the username")
+});
+
+app.put("/users/:username/favorites", (req, res) =>{
+  res.send("Successful PUT request to add a movie to user favorites list")
+});
+
+  //DELETE request 
+
+  app.delete("/users/:username/favorites", (req, res) =>{
+    res.send("Successful DELETE request to delete a movie from the list of favorites")
+  });
+
+  app.delete("/users/:username", (req, res) =>{
+    res.send("Successful DELETE request to delete an existing user")
+  });
+
   // Serve static files from the "public" directory
 app.use(express.static('public'));
 
