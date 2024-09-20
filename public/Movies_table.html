@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STyle>
+        th{
+            border: 2px solid black;
+            background-color: lightgrey;
+        }
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </STyle>
+</head>
+<body>
+    
+    <table id="sample_table">
+        <thead >
+            <th>MOVIEID</th>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
+            <th>GENREID</th>
+            <th>DIRECTORID</th>
+            <th>IMAGEPATH</th>
+            <th>FEATURED</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Inception</td>
+                <td>A skilled thief, the absolute best in the dangerous art of extraction, steals secrets from deep within the subconscious during the dream state.</td>
+                <td>Science Fiction</td>
+                <td>Christopher Nolan</td>
+                <td>image url</td>   
+                <td>true</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>The Dark Knight</td>
+                <td>Batman sets out to dismantle the remaining criminal organizations that plague Gotham, but the Joker thrusts him into a personal conflict.</td>
+                <td>Action</td>
+                <td>Christopher Nolan </td>
+                <td>image url</td>   
+                <td>true</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Interstellar</td>
+                <td>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</td>
+                <td>Science Fiction</td>
+                <td>Christopher Nolan </td>
+                <td>image url</td>   
+                <td>false</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Gladiator</td>
+                <td>A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.</td>
+                <td>Drama</td>
+                <td>Ridley Scott </td>
+                <td>image url</td>   
+                <td>false</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Blade Runner 2049</td>
+                <td>A young blade runner''s discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who''s been missing for thirty years.</td>
+                <td>Science Fiction</td>
+                <td>Denis Villeneuve</td>
+                <td>image url</td>   
+                <td>true</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Mad Max: Fury Road</td>
+                <td> In a post-apocalyptic wasteland, Max teams up with Furiosa to flee from a tyrant and his army.</td>
+                <td>Action</td>
+                <td>George Miller</td>
+                <td>image url</td>   
+                <td>false</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>The Martian</td>
+                <td>An astronaut becomes stranded on Mars and must rely on his ingenuity to find a way to signal to Earth that he is alive.</td>
+                <td>Science Fiction</td>
+                <td>Ridley Scott</td>
+                <td>image url</td>   
+                <td>false</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Black Hawk Down</td>
+                <td>123 elite U.S. soldiers drop into Somalia to capture two top lieutenants of a renegade warlord, but find themselves in a desperate battle with a large force of heavily armed Somalis.</td>
+                <td>Action</td>
+                <td>Ridley Scott </td>
+                <td>image url</td>   
+                <td>true</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>A Beautiful Mind</td>
+                <td>A brilliant but asocial mathematician, accepts secret work in cryptography, and his life takes a turn for the nightmarish.</td>
+                <td>Drama</td>
+                <td>Ron Howard</td>
+                <td>image url</td>   
+                <td>false</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Schindler’s List</td>
+                <td>In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.</td>
+                <td>Drama</td>
+                <td>Steven Spielberg </td>
+                <td>image url</td>   
+                <td>true</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</br>
+    <table id="genre_table">
+        <thead >
+            <th>GENREID</th>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Action</td>
+                <td>Movies that are characterized by intense physical activity, including fights, chases, explosions, and other dynamic sequences. The focus is on adrenaline-pumping scenes that keep the audience on the edge of their seats.</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Drama</td>
+                <td>Films that focus on realistic storytelling and character development, often exploring complex emotions, relationships, and situations. Dramas aim to depict real-life struggles and dilemmas, evoking empathy and thoughtfulness from the audience.</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Science Fiction</td>
+                <td>A genre that explores imaginative and futuristic concepts, often involving advanced technology, space exploration, time travel, and extraterrestrial life. Sci-fi films challenge the boundaries of possibility and frequently address philosophical or ethical issues through speculative scenarios.</td>
+            </tr>            
+        </tbody>
+    </table>
+</br>
+    <table id="director_table">
+        <thead >
+            <th>DIRECTORID</th>
+            <th>NAME</th>
+            <th>BIO</th>
+            <th>BIRTHYEAR</th>
+            <th>DEATHYEAR</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Christopher Nolan</td>
+                <td> A British-American filmmaker known for his cerebral, nonlinear storytelling and innovative visual style. He is celebrated for movies like "Inception," "The Dark Knight," and "Interstellar."</td>
+                <td>1970</td>
+                <td>N/A</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Ridley Scott</td>
+                <td>An English director and producer renowned for his visually stunning and atmospheric films, often in the science fiction and historical drama genres. Notable works include "Gladiator," "Blade Runner," and "The Martian."</td>
+                <td>1937</td>
+                <td>N/A</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Denis Villeneuve</td>
+                <td>A Canadian director known for his visually captivating and thought-provoking films, often exploring complex themes and futuristic worlds. His acclaimed works include "Blade Runner 2049," "Arrival," and "Dune."</td>
+                <td>1967</td>
+                <td>N/A</td>
+            </tr>            
+
+            <tr>
+                <td>4</td>
+                <td>George Miller</td>
+                <td>An Australian filmmaker best known for creating the "Mad Max" franchise. He is celebrated for his innovative approach to action and post-apocalyptic storytelling.</td>
+                <td>1945</td>
+                <td>N/A</td>
+            </tr>   
+
+            <tr>
+                <td>5</td>
+                <td>Ron Howard</td>
+                <td>An American filmmaker and actor who transitioned from a child star to a highly successful director known for his versatility. His notable films include "A Beautiful Mind," "Apollo 13," and "The Da Vinci Code."</td>
+                <td>1954</td>
+                <td>N/A</td>
+            </tr>   
+
+            <tr>
+                <td>6</td>
+                <td>Steven Spielberg</td>
+                <td>An American filmmaker regarded as one of the most influential directors in the history of cinema, known for his blockbuster films and storytelling mastery. Key works include "Schindler’s List," "E.T.," and "Jurassic Park."</td>
+                <td>1946</td>
+                <td>N/A</td>
+            </tr>   
+        </tbody>
+    </table>
+</br>
+    <table id="users_table">
+        <thead >
+            <th>USERID</th>
+            <th>USERNAME</th>
+            <th>PASSWORD</th>
+            <th>EMAIL</th>
+            <th>BIRTHDATE</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>MovieBuff88</td>
+                <td>Pa$$w0rd123!</td>
+                <td>moviebuff88@example.com</td>
+                <td>1988</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>SciFiFanatic</td>
+                <td>GalacticVoy@ger21</td>
+                <td>scififanatic@example.com</td>
+                <td>1992</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>DramaQueen77</td>
+                <td>Em0ti0n$Unle@shed</td>
+                <td>dramaqueen77@example.com</td>
+                <td>1977</td>
+            </tr>            
+        </tbody>
+    </table>
+</br>
+    <table id="Users_movie_table">
+        <thead >
+            <th>USERMOVIED</th>
+            <th>USERID</th>
+            <th>MOVIEID</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>            
+        </tbody>
+    </table>
+</br>
+</body>
+</html>
+
