@@ -1,101 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API Documentation</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>REST API Documentation Site</h1>
 
-    <p>This API gives you information about different movies, directors, and genres.</p>
+    <p>
+      This API gives you information about different movies, directors, and
+      genres.
+    </p>
 
     <table>
-        <thead>
-            <tr>
-                <th>Bussines Logic</th>
-                <th>URL</th>
-                <th>HTTP Method</th>
-                <th>Querry Parameters</th>
-                <th>Requqest body data format</th>
-                <th>Responde body data format</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Return a list of ALL movies to the user</td>
-                <td>/movies</td>
-                <td>GET</td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td>Successful GET request returning data of all movies</td>
-            </tr>
-            
-            <tr>
-                <td>Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</td>
-                <td>/movies/:name</td>
-                <td>GET</td>
-                <td>:name</td>
-                <td>N/A</td>
-                <td>Successful GET request returning data of an specific movie</td>
-            </tr>
-            <tr>
-                <td>Return data about a genre (description) by name/title (e.g., “Thriller”)</td>
-                <td>/genres/:name</td>
-                <td>GET</td>
-                <td>:name</td>
-                <td>N/A</td>
-                <td>Successful GET request returning data about a genre</td>
-            </tr>
-            <tr>
-                <td>Return data about a director (bio, birth year, death year) by name</td>
-                <td>/directors/:name</td>
-                <td>GET</td>
-                <td>:name</td>
-                <td>N/A</td>
-                <td>Successful GET request returning data about a director</td>
-            </tr>
-            <tr>
-                <td>Allow new users to register</td>
-                <td>/users/register</td>
-                <td>POST</td>
-                <td>N/A</td>
-                <td>A JSON object holding data about a new user (username, email, password)</td>
-                <td>Successful POST request to register a new user</td>
-            </tr>
-            <tr>
-                <td>Allow users to update their user info (username)</td>
-                <td>/users/:username</td>
-                <td>PUT</td>
-                <td>:username</td>
-                <td>A JSON object holding updated data about the username</td>
-                <td>Successful PUT request to update the username</td>
-            </tr>
-            <tr>
-                <td>Allow users to add a movie to their list of favorites (showing only a text that a movie has been added—more on this later)</td>
-                <td>/users/:username/favorites</td>
-                <td>PUT</td>
-                <td>:username</td>
-                <td>A JSON object holding data about a favorite movie.</td>
-                <td>Successful PUT request to add a movie to user favorites list</td>
-            </tr>
-            <tr>
-                <td>Allow users to remove a movie from their list of favorites (showing only a text that a movie has been removed—more on this later)</td>
-                <td>/users/:username/favorites</td>
-                <td>DELETE</td>
-                <td>:username</td>
-                <td>A JSON object holding data about a favorite movie to remove</td>
-                <td>Successful DELETE request to delete a movie from the list of favorites</td>
-            </tr>
-            <tr>
-                <td>Allow existing users to deregister (showing only a text that a user email has been removed—more on this later)</td>
-                <td>/users/:username</td>
-                <td>DELETE</td>
-                <td>:username</td>
-                <td>N/A</td>
-                <td>Successful DELETE request to delete an existing user</td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Bussines Logic</th>
+          <th>URL</th>
+          <th>HTTP Method</th>
+          <th>Querry Parameters</th>
+          <th>Requqest body data format</th>
+          <th>Responde body data format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Return a list of ALL movies to the user</td>
+          <td>/movies</td>
+          <td>GET</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>A JSON object with the data about all our movies</td>
+        </tr>
+
+        <tr>
+          <td>
+            Return data (description, genre, director, image URL, whether it’s
+            featured or not) about a single movie by title to the user
+          </td>
+          <td>/movies/:title</td>
+          <td>GET</td>
+          <td>:name</td>
+          <td>N/A</td>
+          <td>A JSON object with the data of one movie</td>
+        </tr>
+        <tr>
+          <td>
+            Return data about a genre (description) by name/title (e.g.,
+            “Thriller”)
+          </td>
+          <td>/movies/genre/:genreName</td>
+          <td>GET</td>
+          <td>/movies/genre/:genreName</td>
+          <td>N/A</td>
+          <td>A JSON object with the description of one genre</td>
+        </tr>
+        <tr>
+          <td>
+            Return data about a director (bio, birth year, death year) by name
+          </td>
+          <td>/movies/directors/:directorName</td>
+          <td>GET</td>
+          <td>:name</td>
+          <td>N/A</td>
+          <td>A JSON object with the data about a Director</td>
+        </tr>
+        <tr>
+          <td>Return data about all users</td>
+          <td>/users</td>
+          <td>GET</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>A JSON object with the data about all user</td>
+        </tr>
+        <tr>
+          <td>Return data about one single user</td>
+          <td>/users/:Username</td>
+          <td>GET</td>
+          <td>:Username</td>
+          <td>N/A</td>
+          <td>A JSON object with the data about a single user</td>
+        </tr>
+        <tr>
+          <td>Allow new users to register</td>
+          <td>/users</td>
+          <td>POST</td>
+          <td>N/A</td>
+          <td>
+            A JSON object holding data about a new user (username, email,
+            password)
+          </td>
+          <td>Successful POST request to register a new user</td>
+        </tr>
+        <tr>
+          <td>Allow users to update their user info (username)</td>
+          <td>/users/:Username</td>
+          <td>PUT</td>
+          <td>:username</td>
+          <td>A JSON object holding updated data about the username</td>
+          <td>Successful PUT request to update the username</td>
+        </tr>
+        <tr>
+          <td>
+            Allow users to add a movie to their list of favorites (showing only
+            a text that a movie has been added—more on this later)
+          </td>
+          <td>/users/:Username/movies/:MovieID</td>
+          <td>PUT</td>
+          <td>:MovieID</td>
+          <td>A JSON object holding data about a favorite movie.</td>
+          <td>Successful PUT request to add a movie to user favorites list</td>
+        </tr>
+        <tr>
+          <td>
+            Allow users to remove a movie from their list of favorites (showing
+            only a text that a movie has been removed—more on this later)
+          </td>
+          <td>/users/:Username/movies/:MovieID</td>
+          <td>DELETE</td>
+          <td>:MovieID</td>
+          <td>A JSON object holding data about a favorite movie to remove</td>
+          <td>
+            Successful DELETE request to delete a movie from the list of
+            favorites
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Allow existing users to deregister (showing only a text that a user
+            email has been removed—more on this later)
+          </td>
+          <td>/users/:username</td>
+          <td>DELETE</td>
+          <td>:username</td>
+          <td>N/A</td>
+          <td>Successful DELETE request to delete an existing user</td>
+        </tr>
+      </tbody>
     </table>
-</body>
+  </body>
 </html>
