@@ -712,3 +712,7 @@
 ::ffff:127.0.0.1 - - [22/Sep/2024:19:02:07 +0000] "DELETE /users/Giancarlo_tres/favorites/66e73d58dbe8e5c391c73bfa HTTP/1.1" 404 197 "-" "PostmanRuntime/7.42.0"
 ::ffff:127.0.0.1 - - [22/Sep/2024:19:02:21 +0000] "DELETE /users/user6/favorites/66e74010dbe8e5c391c73bfc HTTP/1.1" 404 188 "-" "PostmanRuntime/7.42.0"
 ::ffff:127.0.0.1 - - [22/Sep/2024:19:02:33 +0000] "DELETE /users/user6/movies/66e74010dbe8e5c391c73bfc HTTP/1.1" 200 168 "-" "PostmanRuntime/7.42.0"
+::ffff:127.0.0.1 - - [22/Sep/2024:19:33:51 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Sep/2024:19:33:52 +0000] "GET /movies HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Sep/2024:19:33:52 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:8080/movies" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Sep/2024:19:35:37 +0000] "GET /movies/genre/Action HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
