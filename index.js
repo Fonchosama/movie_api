@@ -11,6 +11,7 @@ const Users = Models.User;
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
   flags: 'a',
@@ -57,33 +58,35 @@ app.get('/movies/:title', async (req, res) => {
     });
 }); //working
 
+//get a genre description
 app.get('/movies/genre/:genreName', async (req, res) => {
-  await Movies.findOne({ GenreName: req.params.genreName })
-    .then((movie) => {
-      res.json(movie);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).send('Error: ' + err);
+  try {
+    const movie = await Movies.findOne({
+      'Genre.Name': req.params.genreName,
     });
+    if (movie) {
+      res.status(200).json(movie.Genre);
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error: ' + err);
+  }
+}); // working
+
+//get a Director description
+app.get('/movies/directors/:directorName', async (req, res) => {
+  try {
+    const movie = await Movies.findOne({
+      'Director.Name': req.params.directorName,
+    });
+    if (movie) {
+      res.status(200).json(movie.Director);
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error: ' + err);
+  }
 }); //working
-
-// get a  Genre description
-// app.get('/movies/genre/:genreName', async (req, res) => {
-//   try {
-//     const genreName = req.params.genreName;
-//     const movie = await Movies.findOne({ 'Genre.Name': req.params.genreName });
-
-//     if (movie) {
-//       res.status(200).json(movie.Genre);
-//     } else {
-//       res.status(404).send('No such genre found');
-//     }
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send('Error: ' + err);
-//   }
-// }); //working
 
 // Get all users
 app.get('/users', async (req, res) => {
@@ -135,7 +138,7 @@ app.post('/users', async (req, res) => {
       console.error(error);
       res.status(500).send('Error: ' + error);
     });
-});
+}); //working
 
 // Update a User information
 app.put('/users/:Username', async (req, res) => {
@@ -158,10 +161,10 @@ app.put('/users/:Username', async (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
-});
+}); //working
 
 // Add a movie to user's favorite list
-app.post('/users/:Username/movies/:MovieID', async (req, res) => {
+app.patch('/users/:Username/movies/:MovieID', async (req, res) => {
   await Users.findOneAndUpdate(
     { Username: req.params.Username },
     {
@@ -176,7 +179,7 @@ app.post('/users/:Username/movies/:MovieID', async (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
-});
+}); //working
 
 // Remove a movie from user's favorite list
 app.delete('/users/:Username/movies/:MovieID', async (req, res) => {
@@ -194,11 +197,11 @@ app.delete('/users/:Username/movies/:MovieID', async (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
-});
+}); // working
 
 // Delete a User
 app.delete('/users/:Username', async (req, res) => {
-  await Users.findOneAndRemove({ Username: req.params.Username })
+  await Users.findOneAndDelete({ Username: req.params.Username })
     .then((user) => {
       if (!user) {
         res.status(400).send(req.params.Username + ' was not found');
@@ -210,7 +213,7 @@ app.delete('/users/:Username', async (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
-});
+}); //working
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
