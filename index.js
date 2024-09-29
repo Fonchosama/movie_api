@@ -29,11 +29,12 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
 });
 app.use(morgan('combined', { stream: accessLogStream }));
 
-// Connecting to the DB
-mongoose.connect('mongodb://127.0.0.1:27017/gianflixdb', {
+// Connecting to the DB !!!database name check
+mongoose.connect(CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+//mongodb://127.0.0.1:27017/gianflixdb -> previous server
 
 // GET requests
 
@@ -298,7 +299,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something broke!');
 });
 
-// listen for requests
+// listen for requests heroku
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log('Listening on Port ' + port);

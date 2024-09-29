@@ -1,0 +1,4 @@
+{"_id":{"$oid":"66e746e7dbe8e5c391c73c03"},"Username":"user2","Password":"password2","Email":"user2@gmail.com","Birthday":{"$date":"1990-02-02T00:00:00Z"},"Favorites":"66e74143dbe8e5c391c73bfd"}
+{"_id":{"$oid":"66e7472bdbe8e5c391c73c04"},"Username":"user3","Password":"password3","Email":"user3@gmail.com","Birthday":{"$date":"1990-03-03T00:00:00Z"},"Favorites":"66e74241dbe8e5c391c73bfe"}
+{"_id":{"$oid":"66e74783dbe8e5c391c73c05"},"Username":"user4","Password":"password4","Email":"user4@gmail.com","Birthdate":{"$date":"1990-04-04T00:00:00Z"},"Favorites":"66e743f1dbe8e5c391c73c00"}
+{"_id":{"$oid":"66e747cbdbe8e5c391c73c06"},"Username":"user5","Password":"password5","Email":"user5@gmail.com","Birthdate":{"$date":"1990-05-05T00:00:00Z"},"Favorites":"66e744d5dbe8e5c391c73c01"}
