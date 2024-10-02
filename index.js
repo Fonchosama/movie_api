@@ -30,10 +30,10 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
 app.use(morgan('combined', { stream: accessLogStream }));
 
 // Connecting to the DB !!!database name check
-mongoose.connect(process.env.CONNECTION_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  'mongodb+srv://gianbo251:HeueXWXZKYEnfTYH@gianflix.b4m5i.mongodb.net/myFlixDB?retryWrites=true&w=majority&appName=GianFlix',
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 //mongodb://127.0.0.1:27017/gianflixdb -> previous server
 
 // GET requests
