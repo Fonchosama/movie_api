@@ -31,7 +31,7 @@ app.use(morgan('combined', { stream: accessLogStream }));
 
 // Connecting to the DB !!!database name check
 mongoose.connect(
-  'mongodb+srv://gianbo251:HeueXWXZKYEnfTYH@gianflix.b4m5i.mongodb.net/movies?retryWrites=true&w=majority&appName=GianFlix',
+  'mongodb+srv://gianbo251:HeueXWXZKYEnfTYH@gianflix.b4m5i.mongodb.net/myFlixDB?retryWrites=true&w=majority&appName=GianFlix',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
