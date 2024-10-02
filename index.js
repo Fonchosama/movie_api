@@ -30,7 +30,7 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
 app.use(morgan('combined', { stream: accessLogStream }));
 
 // Connecting to the DB !!!database name check
-mongoose.connect(CONNECTION_URI, {
+mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
